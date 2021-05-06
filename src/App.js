@@ -378,7 +378,7 @@ function App() {
                           </p>
                           <div className="mt-3 px-4 flex space-x-4 md:space-x-2">
                             {product.styles.slice(0, 5).map((style, i) => (
-                              <span className="md:flex-1 md:min-w-0">
+                              <span className="md:flex-1 md:min-w-0 md:flex">
                                 <button
                                   className={`h-6 w-6 flex flex-col border border-gray-200 rounded-full overflow-hidden focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 focus:outline-none ${
                                     i === 0
@@ -411,25 +411,27 @@ function App() {
                                 </button>
                               </span>
                             ))}
-                            <button
-                              type="button"
-                              className="w-7 h-7 rounded-full flex items-center justify-center hover:border-gray-900"
-                            >
-                              <svg
-                                className="h-4 w-4"
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
+                            <span className="md:flex-1 md:min-w-0 md:flex">
+                              <button
+                                type="button"
+                                className="w-7 h-7 rounded-full flex items-center justify-center hover:border-gray-900 md:aspect-h-1 md:aspect-w-1"
                               >
-                                <path
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  strokeWidth={2}
-                                  d="M9 5l7 7-7 7"
-                                />
-                              </svg>
-                            </button>
+                                <svg
+                                  className="h-4 w-4"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  fill="none"
+                                  viewBox="0 0 24 24"
+                                  stroke="currentColor"
+                                >
+                                  <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M9 5l7 7-7 7"
+                                  />
+                                </svg>
+                              </button>
+                            </span>
                           </div>
                         </div>
                         <div className="border-t">
